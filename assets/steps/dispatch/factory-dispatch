@@ -226,7 +226,7 @@ def dispatch(args):
                 env = os.environ.copy()
                 env.pop("PASEO_AGENT_ID", None)
                 env.pop("PASEO_WORKSPACE_ID", None)
-                # work-epic branches from origin/main; the declared branch may differ.
+                # work-epic defaults to main; use the repository's declared remote branch.
                 prompt = (f"/fff:work-epic {number}\n\n"
                           f"This fresh Paseo worktree starts on a dispatch branch; create "
                           f"epic/{number} from {remote_ref} here as work-epic requires.")
